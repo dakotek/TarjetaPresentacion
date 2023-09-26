@@ -52,7 +52,7 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
     ) {
         Text(
             text = message,
-            fontSize = 50.sp,
+            fontSize = 45.sp,
             lineHeight = 50.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center
@@ -70,8 +70,8 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
 fun GreetingImage(message: String, from1: String, from2: String, modifier: Modifier = Modifier) {
     val image = painterResource(R.drawable.fondopresentacion)
     val image2 = painterResource(R.drawable.personas)
-    val correoImage = painterResource(R.drawable.correo)
-    val telefonoImage = painterResource(R.drawable.telefono)
+    val image3 = painterResource(R.drawable.telefono)
+    val image4 = painterResource(R.drawable.correo)
 
     Box(modifier = modifier.fillMaxSize()) {
         Image(
@@ -85,7 +85,7 @@ fun GreetingImage(message: String, from1: String, from2: String, modifier: Modif
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .align(Alignment.TopCenter) // Alinea la columna en la parte superior del Box
+                .align(Alignment.TopCenter)
         ) {
             Image(
                 painter = image2,
@@ -93,14 +93,14 @@ fun GreetingImage(message: String, from1: String, from2: String, modifier: Modif
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .size(200.dp)
-                    .align(Alignment.CenterHorizontally) // Centra la imagen horizontalmente en la columna
+                    .align(Alignment.CenterHorizontally)
             )
             GreetingText(
                 message = message,
                 from = from1,
                 modifier = Modifier
                     .padding(8.dp)
-                    .align(Alignment.CenterHorizontally) // Centra el texto horizontalmente en la columna
+                    .align(Alignment.CenterHorizontally)
             )
             // Columna de Guille
             Column(
@@ -113,7 +113,7 @@ fun GreetingImage(message: String, from1: String, from2: String, modifier: Modif
                         .align(Alignment.CenterHorizontally)
                 ) {
                     Image(
-                        painter = telefonoImage,
+                        painter = image3,
                         contentDescription = null,
                         modifier = Modifier
                             .size(25.dp)
@@ -131,7 +131,7 @@ fun GreetingImage(message: String, from1: String, from2: String, modifier: Modif
                         .align(Alignment.CenterHorizontally)
                 ) {
                     Image(
-                        painter = correoImage,
+                        painter = image4,
                         contentDescription = null,
                         modifier = Modifier
                             .size(35.dp)
@@ -158,7 +158,7 @@ fun GreetingImage(message: String, from1: String, from2: String, modifier: Modif
                 from = from2,
                 modifier = Modifier
                     .padding(8.dp)
-                    .align(Alignment.CenterHorizontally) // Centra el texto horizontalmente en la columna
+                    .align(Alignment.CenterHorizontally)
             )
             // Columna de David
             Column(
@@ -171,7 +171,7 @@ fun GreetingImage(message: String, from1: String, from2: String, modifier: Modif
                         .align(Alignment.CenterHorizontally)
                 ) {
                     Image(
-                        painter = telefonoImage,
+                        painter = image3,
                         contentDescription = null,
                         modifier = Modifier
                             .size(25.dp)
@@ -189,7 +189,7 @@ fun GreetingImage(message: String, from1: String, from2: String, modifier: Modif
                         .align(Alignment.CenterHorizontally)
                 ) {
                     Image(
-                        painter = correoImage,
+                        painter = image4,
                         contentDescription = null,
                         modifier = Modifier
                             .size(35.dp)
