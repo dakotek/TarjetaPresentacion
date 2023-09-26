@@ -7,6 +7,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -69,6 +70,8 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
 fun GreetingImage(message: String, from1: String, from2: String, modifier: Modifier = Modifier) {
     val image = painterResource(R.drawable.fondopresentacion)
     val image2 = painterResource(R.drawable.personas)
+    val correoImage = painterResource(R.drawable.correo)
+    val telefonoImage = painterResource(R.drawable.telefono)
 
     Box(modifier = modifier.fillMaxSize()) {
         Image(
@@ -104,24 +107,42 @@ fun GreetingImage(message: String, from1: String, from2: String, modifier: Modif
                 modifier = Modifier
                     .weight(1f)
             ) {
-                Text(
-                    text = "+34 123 456 789",
+                Row(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .align(Alignment.CenterHorizontally),
-                    textAlign = TextAlign.Center,
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold
-                )
-                Text(
-                    text = "guille@gmail.com",
+                        .padding(8.dp)
+                        .align(Alignment.CenterHorizontally)
+                ) {
+                    Image(
+                        painter = telefonoImage,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(25.dp)
+                            .padding(end = 8.dp)
+                    )
+                    Text(
+                        text = "+34 123 456 789",
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+                Row(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .align(Alignment.CenterHorizontally),
-                    textAlign = TextAlign.Center,
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold
-                )
+                        .padding(8.dp)
+                        .align(Alignment.CenterHorizontally)
+                ) {
+                    Image(
+                        painter = correoImage,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(35.dp)
+                            .padding(end = 8.dp)
+                    )
+                    Text(
+                        text = "guille@gmail.com",
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
                 Text(
                     text = "GUILLERMO FERNANDEZ",
                     modifier = Modifier
@@ -144,24 +165,42 @@ fun GreetingImage(message: String, from1: String, from2: String, modifier: Modif
                 modifier = Modifier
                     .weight(1f)
             ) {
-                Text(
-                    text = "+34 987 654 321",
+                Row(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .align(Alignment.CenterHorizontally),
-                    textAlign = TextAlign.Center,
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold
-                )
-                Text(
-                    text = "david@gmail.com",
+                        .padding(8.dp)
+                        .align(Alignment.CenterHorizontally)
+                ) {
+                    Image(
+                        painter = telefonoImage,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(25.dp)
+                            .padding(end = 8.dp)
+                    )
+                    Text(
+                        text = "+34 987 654 321",
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+                Row(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .align(Alignment.CenterHorizontally),
-                    textAlign = TextAlign.Center,
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold
-                )
+                        .padding(8.dp)
+                        .align(Alignment.CenterHorizontally)
+                ) {
+                    Image(
+                        painter = correoImage,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(35.dp)
+                            .padding(end = 8.dp)
+                    )
+                    Text(
+                        text = "david@gmail.com",
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
                 Text(
                     text = "DAVID SANCHEZ",
                     modifier = Modifier
